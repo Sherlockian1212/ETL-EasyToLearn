@@ -58,6 +58,7 @@
             this.btnOut.TabIndex = 1;
             this.btnOut.Text = "Thoát";
             this.btnOut.UseVisualStyleBackColor = true;
+            this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
             // 
             // lblName
             // 
@@ -130,6 +131,7 @@
             this.btnReview.TabIndex = 1;
             this.btnReview.Text = "Xem chi tiết";
             this.btnReview.UseVisualStyleBackColor = true;
+            this.btnReview.Click += new System.EventHandler(this.btnReview_Click);
             // 
             // btnBeginTestAgain
             // 
@@ -139,6 +141,7 @@
             this.btnBeginTestAgain.TabIndex = 1;
             this.btnBeginTestAgain.Text = "Làm lại";
             this.btnBeginTestAgain.UseVisualStyleBackColor = true;
+            this.btnBeginTestAgain.Click += new System.EventHandler(this.btnBeginTestAgain_Click);
             // 
             // frmResultAndReviewTest
             // 
@@ -157,9 +160,10 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmResultAndReviewTest";
             this.Text = "frmResultAndReviewTest";
+            this.Load += new System.EventHandler(this.frmResultAndReviewTest_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

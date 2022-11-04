@@ -14,7 +14,7 @@ namespace Released1
         List <QuestionAnswer> qaListQuestionAnswer;
         List <int> iUserAnswer;
         DateTime dtTime;
-        DateTime dtTimeLimit;
+        int dtTimeLimit;
         double dScore;
         double dMaxScore;
         double dSumScore;
@@ -51,7 +51,7 @@ namespace Released1
             get { return dtTime; }
             set { dtTime = value; }
         }
-        public DateTime _TimeLimit
+        public int _TimeLimits
         {
             get { return dtTimeLimit; }
             set { dtTimeLimit = value; }
@@ -82,7 +82,7 @@ namespace Released1
             qaListQuestionAnswer = new List<QuestionAnswer>();
             iUserAnswer = new List<int>();
             dtTime = new DateTime();
-            dtTimeLimit = new DateTime();
+            dtTimeLimit = 0;
             dScore = 0;
             dMaxScore = 0;
             dSumScore = 0;
@@ -93,7 +93,7 @@ namespace Released1
             List <QuestionAnswer> qaListQuestionAnswer, 
             List <int> iUserAnswer, 
             DateTime dtTime, 
-            DateTime dtTimeLimit, 
+            int dtTimeLimit, 
             double dScore, 
             double dMaxScore, 
             double dSumScore)
@@ -121,6 +121,19 @@ namespace Released1
             dScore = t.dScore;
             dMaxScore = t.dMaxScore;
             dSumScore = t.dSumScore;
+        }
+        public int result()
+        {
+            int r = 0;
+            for (int i =0; i < iNumOfQ; i++)
+            {
+                if ( iUserAnswer[i] == qaListQuestionAnswer[i]._iCorrectAnswer)
+                {
+                    r++;
+                }
+            }
+           
+            return r;
         }
     }
 }

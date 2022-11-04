@@ -23,7 +23,8 @@ namespace Released1
         {
             i = 0;
             btnBack.Enabled = false;
-            btnSave.Enabled = false;
+            btnSave.Enabled = false; 
+            rdbA.Checked = true;
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -31,6 +32,19 @@ namespace Released1
             
             Temp.soq.qa[i]._strContentQuestion = rtbContent.Text;
             Temp.soq.qa[i]._strListAnswer = new List<string> { txtA.Text, txtB.Text, txtC.Text, txtD.Text };
+            if (rdbA.Checked)
+                Temp.soq.qa[i]._iCorrectAnswer = 0;
+            else if (rdbB.Checked)
+                Temp.soq.qa[i]._iCorrectAnswer = 1;
+            else if (rdbC.Checked)
+                Temp.soq.qa[i]._iCorrectAnswer = 2;
+            else if (rdbD.Checked)
+                Temp.soq.qa[i]._iCorrectAnswer = 3;
+            else
+            {
+                MessageBox.Show("Bạn chưa chọn đáp án!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             i++;
             if (i < Temp.soq._iNumOfQ)
@@ -61,6 +75,22 @@ namespace Released1
             txtB.Text = Temp.soq.qa[i]._strListAnswer[1];
             txtC.Text = Temp.soq.qa[i]._strListAnswer[2];
             txtD.Text = Temp.soq.qa[i]._strListAnswer[3];
+            if (Temp.soq.qa[i]._iCorrectAnswer == 0)
+            {
+                rdbA.Checked = true;
+            }
+            if (Temp.soq.qa[i]._iCorrectAnswer == 1)
+            {
+                rdbB.Checked = true;
+            }
+            if (Temp.soq.qa[i]._iCorrectAnswer == 2)
+            {
+                rdbC.Checked = true;
+            }
+            if (Temp.soq.qa[i]._iCorrectAnswer == 3)
+            {
+                rdbD.Checked = true;
+            }
 
         }
 
@@ -70,6 +100,21 @@ namespace Released1
         {
             Temp.soq.qa[i]._strContentQuestion = rtbContent.Text;
             Temp.soq.qa[i]._strListAnswer = new List<string> { txtA.Text, txtB.Text, txtC.Text, txtD.Text };
+
+            if (rdbA.Checked)
+                Temp.soq.qa[i]._iCorrectAnswer = 0;
+            else if (rdbB.Checked)
+                Temp.soq.qa[i]._iCorrectAnswer = 1;
+            else if (rdbC.Checked)
+                Temp.soq.qa[i]._iCorrectAnswer = 2;
+            else if (rdbD.Checked)
+                Temp.soq.qa[i]._iCorrectAnswer = 3;
+            else
+            {
+                MessageBox.Show("Bạn chưa chọn đáp án!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             i--;
             if (i < Temp.soq._iNumOfQ)
             {
@@ -100,6 +145,22 @@ namespace Released1
             txtB.Text = Temp.soq.qa[i]._strListAnswer[1];
             txtC.Text = Temp.soq.qa[i]._strListAnswer[2];
             txtD.Text = Temp.soq.qa[i]._strListAnswer[3];
+            if (Temp.soq.qa[i]._iCorrectAnswer == 0)
+            {
+                rdbA.Checked = true ;
+            }
+            if (Temp.soq.qa[i]._iCorrectAnswer == 1)
+            {
+                rdbB.Checked = true;
+            }
+            if (Temp.soq.qa[i]._iCorrectAnswer == 2)
+            {
+                rdbC.Checked = true;
+            }
+            if (Temp.soq.qa[i]._iCorrectAnswer == 3)
+            {
+                rdbD.Checked = true;
+            }
         }
 
         private void btnOut_Click(object sender, EventArgs e)
@@ -109,6 +170,24 @@ namespace Released1
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            Temp.soq.qa[i]._strContentQuestion = rtbContent.Text;
+            Temp.soq.qa[i]._strListAnswer = new List<string> { txtA.Text, txtB.Text, txtC.Text, txtD.Text };
+
+            if (rdbA.Checked)
+                Temp.soq.qa[i]._iCorrectAnswer = 0;
+            else if (rdbB.Checked)
+                Temp.soq.qa[i]._iCorrectAnswer = 1;
+            else if (rdbC.Checked)
+                Temp.soq.qa[i]._iCorrectAnswer = 2;
+            else if (rdbD.Checked)
+                Temp.soq.qa[i]._iCorrectAnswer = 3;
+            else
+            {
+                MessageBox.Show("Bạn chưa chọn đáp án!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
             Temp.soq.newFile();
             DialogResult r = MessageBox.Show("Bạn có muốn lưu và thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (r == DialogResult.Yes)

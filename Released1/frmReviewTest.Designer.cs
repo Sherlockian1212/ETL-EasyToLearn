@@ -41,7 +41,8 @@
             this.rtbContent = new System.Windows.Forms.RichTextBox();
             this.lblIndex = new System.Windows.Forms.Label();
             this.lblContent = new System.Windows.Forms.Label();
-            this.lblCorectAnswer = new System.Windows.Forms.Label();
+            this.lblCorrectAnswer = new System.Windows.Forms.Label();
+            this.btnOut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtD
@@ -49,6 +50,7 @@
             this.txtD.Location = new System.Drawing.Point(211, 419);
             this.txtD.Margin = new System.Windows.Forms.Padding(4);
             this.txtD.Name = "txtD";
+            this.txtD.ReadOnly = true;
             this.txtD.Size = new System.Drawing.Size(796, 30);
             this.txtD.TabIndex = 27;
             // 
@@ -57,6 +59,7 @@
             this.txtC.Location = new System.Drawing.Point(210, 341);
             this.txtC.Margin = new System.Windows.Forms.Padding(4);
             this.txtC.Name = "txtC";
+            this.txtC.ReadOnly = true;
             this.txtC.Size = new System.Drawing.Size(796, 30);
             this.txtC.TabIndex = 28;
             // 
@@ -65,6 +68,7 @@
             this.txtB.Location = new System.Drawing.Point(210, 264);
             this.txtB.Margin = new System.Windows.Forms.Padding(4);
             this.txtB.Name = "txtB";
+            this.txtB.ReadOnly = true;
             this.txtB.Size = new System.Drawing.Size(796, 30);
             this.txtB.TabIndex = 29;
             // 
@@ -73,6 +77,7 @@
             this.txtA.Location = new System.Drawing.Point(210, 187);
             this.txtA.Margin = new System.Windows.Forms.Padding(4);
             this.txtA.Name = "txtA";
+            this.txtA.ReadOnly = true;
             this.txtA.Size = new System.Drawing.Size(796, 30);
             this.txtA.TabIndex = 30;
             // 
@@ -133,6 +138,7 @@
             this.btnBack.TabIndex = 21;
             this.btnBack.Text = "Câu phía trước";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnNext
             // 
@@ -143,6 +149,7 @@
             this.btnNext.TabIndex = 22;
             this.btnNext.Text = "Câu tiếp theo";
             this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // rtbContent
             // 
@@ -150,6 +157,7 @@
             this.rtbContent.Location = new System.Drawing.Point(210, 36);
             this.rtbContent.Margin = new System.Windows.Forms.Padding(4);
             this.rtbContent.Name = "rtbContent";
+            this.rtbContent.ReadOnly = true;
             this.rtbContent.Size = new System.Drawing.Size(796, 121);
             this.rtbContent.TabIndex = 20;
             this.rtbContent.Text = "";
@@ -174,16 +182,27 @@
             this.lblContent.TabIndex = 19;
             this.lblContent.Text = "Câu hỏi:";
             // 
-            // lblCorectAnswer
+            // lblCorrectAnswer
             // 
-            this.lblCorectAnswer.AutoSize = true;
-            this.lblCorectAnswer.ForeColor = System.Drawing.Color.Red;
-            this.lblCorectAnswer.Location = new System.Drawing.Point(207, 489);
-            this.lblCorectAnswer.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.lblCorectAnswer.Name = "lblCorectAnswer";
-            this.lblCorectAnswer.Size = new System.Drawing.Size(162, 22);
-            this.lblCorectAnswer.TabIndex = 19;
-            this.lblCorectAnswer.Text = "Câu trả lời đúng: A";
+            this.lblCorrectAnswer.AutoSize = true;
+            this.lblCorrectAnswer.ForeColor = System.Drawing.Color.Red;
+            this.lblCorrectAnswer.Location = new System.Drawing.Point(207, 489);
+            this.lblCorrectAnswer.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.lblCorrectAnswer.Name = "lblCorrectAnswer";
+            this.lblCorrectAnswer.Size = new System.Drawing.Size(162, 22);
+            this.lblCorrectAnswer.TabIndex = 19;
+            this.lblCorrectAnswer.Text = "Câu trả lời đúng: A";
+            // 
+            // btnOut
+            // 
+            this.btnOut.Location = new System.Drawing.Point(399, 526);
+            this.btnOut.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOut.Name = "btnOut";
+            this.btnOut.Size = new System.Drawing.Size(106, 56);
+            this.btnOut.TabIndex = 21;
+            this.btnOut.Text = "Thoát";
+            this.btnOut.UseVisualStyleBackColor = true;
+            this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
             // 
             // frmReviewTest
             // 
@@ -198,16 +217,18 @@
             this.Controls.Add(this.rdbC);
             this.Controls.Add(this.rdbB);
             this.Controls.Add(this.rdbA);
+            this.Controls.Add(this.btnOut);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.rtbContent);
             this.Controls.Add(this.lblIndex);
-            this.Controls.Add(this.lblCorectAnswer);
+            this.Controls.Add(this.lblCorrectAnswer);
             this.Controls.Add(this.lblContent);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "frmReviewTest";
             this.Text = "frmReviewTest";
+            this.Load += new System.EventHandler(this.frmReviewTest_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,6 +249,7 @@
         private System.Windows.Forms.RichTextBox rtbContent;
         private System.Windows.Forms.Label lblIndex;
         private System.Windows.Forms.Label lblContent;
-        private System.Windows.Forms.Label lblCorectAnswer;
+        private System.Windows.Forms.Label lblCorrectAnswer;
+        private System.Windows.Forms.Button btnOut;
     }
 }

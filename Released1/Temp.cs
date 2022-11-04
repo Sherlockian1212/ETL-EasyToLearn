@@ -10,7 +10,7 @@ namespace Released1
     {
         public static QuestionAnswer[] qa;
         public static SetOfQuestion soq = new SetOfQuestion();
-        public static Test t;
+        public static Test test = new Test();
         public static bool Check = false;
         public static List <string> Data_NameOfQ = new List <string> ();
         public static List <string> Data_NumberOfQ = new List <string> ();

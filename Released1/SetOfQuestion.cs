@@ -108,7 +108,21 @@ namespace Released1
         public void checkFile(string Path)
         {
             var engine = new FileHelperEngine(typeof(Product));
+
             var products = (Product[])engine.ReadFile(Path);
+            int i = 0;
+            foreach(Product product in products)
+            {
+                qa.Add(new QuestionAnswer());
+                qa[i]._strContentQuestion = product._ContentQuestion;
+                qa[i]._strListAnswer[0] = product._Answer1;
+                qa[i]._strListAnswer[1] = product._Answer2;
+                qa[i]._strListAnswer[2] = product._Answer3;
+                qa[i]._strListAnswer[3] = product._Answer4;
+                qa[i]._iCorrectAnswer = Convert.ToInt32(product._CorrectAnswer);
+                i++;
+            }
+            iNumOfQ = products.Length;
         }
         public void newFile()
         {

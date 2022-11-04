@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -28,7 +29,7 @@ namespace Released1
             cboSetOfQuestion.Items.Clear();
             DirectoryInfo d = new DirectoryInfo(Application.StartupPath + @"\SOQ");
             FileInfo[] DataFile = d.GetFiles();
-            int i = 1;
+            
             foreach (FileInfo datafile in DataFile)
             {
                 string data = datafile.Name;
@@ -40,10 +41,27 @@ namespace Released1
         {
             if (cboSetOfQuestion.SelectedIndex != -1)
             {
-                
-                txtNumOfQ.Text = Temp.Data_NumberOfQ[cboSetOfQuestion.SelectedIndex];
+                string list = cboSetOfQuestion.Text;
+                Temp.soq = new SetOfQuestion();
+                string path = Application.StartupPath + @"\SOQ\" + list;
+                Temp.soq.checkFile(path);
+                txtNumOfQ.Text = Temp.soq._iNumOfQ.ToString();
             }
            
+        }
+
+        List <QuestionAnswer> random(int i, SetOfQuestion soq)
+        {
+            List<QuestionAnswer> result = soq.qa;
+            int j = 0;
+            while (j < soq.qa.Count-i)
+            {
+                Random random = new Random();
+                int r = random.Next(result.Count);
+                result.Remove(result[r]);
+                j++;
+            }
+            return result;
         }
 
         private void btnBeginTest_Click(object sender, EventArgs e)
@@ -74,13 +92,34 @@ namespace Released1
                     return;
                 }
             }
-            if (Convert.ToInt32(txtNumOfQ.Text) > Convert.ToInt32(Temp.Data_NumberOfQ[cboSetOfQuestion.SelectedIndex]))
+            if (Convert.ToInt32(txtNumOfQ.Text) > Temp.soq._iNumOfQ)
             {
                 MessageBox.Show("Số lượng câu hỏi trong bài kiểm tra lớn hơn số câu hỏi trong bộ câu hỏi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            if (Convert.ToInt32(txtNumOfQ.Text) <=0)
+            {
+                MessageBox.Show("Số lượng câu hỏi trong bài kiểm tra phải lớn hơn 0", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // khởi tạo đối tượng bài kiểm tra;
+            Temp.test._strName = cboSetOfQuestion.Text;
+            Temp.test._iNumOfQ = Convert.ToInt32(txtNumOfQ.Text);
+            for(int i = 0; i < Temp.test._iNumOfQ; i++)
+            {
+                Temp.test._iUserAnswer.Add(-1);
+            }
+            if (Convert.ToInt32(txtNumOfQ.Text) == Temp.soq.qa.Count)
+                Temp.test._qaListQuestionAnswer = Temp.soq.qa;
+            else
+                Temp.test._qaListQuestionAnswer = random(int.Parse(txtNumOfQ.Text), Temp.soq);
+
+            Temp.test._TimeLimits = Convert.ToInt32(txtTime.Text);
+            this.Hide();
             frmShowQuestionInTest frmShowQuestionInTest = new frmShowQuestionInTest();
             frmShowQuestionInTest.ShowDialog();
+            
         }
     }
 }
