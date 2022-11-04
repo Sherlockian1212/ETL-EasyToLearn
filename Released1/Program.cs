@@ -18,7 +18,7 @@ namespace Released1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frnHomePage());
+            Application.Run(new frmHomePage());
         }
     }
 }

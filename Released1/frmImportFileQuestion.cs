@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Released1
 {
@@ -25,14 +26,13 @@ namespace Released1
             {
                 txtAddress.Text = ofd.FileName; 
             }
-            
-
         }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
             //Đọc dữ liệu
-            
+            File.AppendAllText(Application.StartupPath + @"\Data\\Data.txt", Temp.soq._strName + "\n");
+            Temp.Data_NameOfQ.Add(Temp.soq._strName);
+            Temp.Data_NumberOfQ.Add(Temp.soq._iNumOfQ.ToString());
 
             if (txtAddress.Text.Trim() == "")
             {

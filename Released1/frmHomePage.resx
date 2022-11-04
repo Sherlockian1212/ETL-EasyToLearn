@@ -285,27 +285,6 @@
   <data name="&gt;&gt;lblSearch.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="clNo.Text" xml:space="preserve">
-    <value>STT</value>
-  </data>
-  <data name="clName.Text" xml:space="preserve">
-    <value>Tên</value>
-  </data>
-  <data name="clName.Width" type="System.Int32, mscorlib">
-    <value>258</value>
-  </data>
-  <data name="cnNumOfQ.Text" xml:space="preserve">
-    <value>Số lượng câu hỏi</value>
-  </data>
-  <data name="cnNumOfQ.Width" type="System.Int32, mscorlib">
-    <value>187</value>
-  </data>
-  <data name="cnScore.Text" xml:space="preserve">
-    <value>Điểm số cao nhất</value>
-  </data>
-  <data name="cnScore.Width" type="System.Int32, mscorlib">
-    <value>162</value>
-  </data>
   <data name="lstvSetOfQuestion.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 10.8pt</value>
   </data>
@@ -329,6 +308,21 @@
   </data>
   <data name="&gt;&gt;lstvSetOfQuestion.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="clNo.Text" xml:space="preserve">
+    <value>STT</value>
+  </data>
+  <data name="clName.Text" xml:space="preserve">
+    <value>Tên</value>
+  </data>
+  <data name="clName.Width" type="System.Int32, mscorlib">
+    <value>420</value>
+  </data>
+  <data name="cnNumOfQ.Text" xml:space="preserve">
+    <value>Số lượng câu hỏi</value>
+  </data>
+  <data name="cnNumOfQ.Width" type="System.Int32, mscorlib">
+    <value>187</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -363,14 +357,8 @@
   <data name="&gt;&gt;cnNumOfQ.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;cnScore.Name" xml:space="preserve">
-    <value>cnScore</value>
-  </data>
-  <data name="&gt;&gt;cnScore.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>frnHomePage</value>
+    <value>frmHomePage</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

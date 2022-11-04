@@ -1,6 +1,6 @@
 ﻿namespace Released1
 {
-    partial class frnHomePage
+    partial class frmHomePage
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frnHomePage));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHomePage));
             this.btnNewSetOfQuestion = new System.Windows.Forms.Button();
             this.btnNewTest = new System.Windows.Forms.Button();
             this.btnStatistical = new System.Windows.Forms.Button();
@@ -39,7 +39,6 @@
             this.clNo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cnNumOfQ = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cnScore = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // btnNewSetOfQuestion
@@ -88,8 +87,7 @@
             this.lstvSetOfQuestion.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clNo,
             this.clName,
-            this.cnNumOfQ,
-            this.cnScore});
+            this.cnNumOfQ});
             resources.ApplyResources(this.lstvSetOfQuestion, "lstvSetOfQuestion");
             this.lstvSetOfQuestion.FullRowSelect = true;
             this.lstvSetOfQuestion.GridLines = true;
@@ -110,11 +108,7 @@
             // 
             resources.ApplyResources(this.cnNumOfQ, "cnNumOfQ");
             // 
-            // cnScore
-            // 
-            resources.ApplyResources(this.cnScore, "cnScore");
-            // 
-            // frnHomePage
+            // frmHomePage
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -125,7 +119,9 @@
             this.Controls.Add(this.btnNewTest);
             this.Controls.Add(this.btnNewSetOfQuestion);
             this.Controls.Add(this.btnHomePage);
-            this.Name = "frnHomePage";
+            this.Name = "frmHomePage";
+            this.Load += new System.EventHandler(this.frmHomePage_Load);
+            this.Click += new System.EventHandler(this.frmHomePage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,7 +138,6 @@
         private System.Windows.Forms.ColumnHeader clNo;
         private System.Windows.Forms.ColumnHeader clName;
         private System.Windows.Forms.ColumnHeader cnNumOfQ;
-        private System.Windows.Forms.ColumnHeader cnScore;
     }
 }
 

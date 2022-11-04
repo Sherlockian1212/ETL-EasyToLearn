@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Released1
 {
@@ -46,7 +47,12 @@ namespace Released1
                     return;
                 }
             }
+
             Temp.soq._iNumOfQ = Convert.ToInt32(txtNumber.Text.Trim());
+            Temp.soq._strName = txtName.Text;
+            Temp.soq._strDescription = txtDescribe.Text;
+            
+
             if (rdbImportFile.Checked)
             {
                 frmImportFileQuestion question = new frmImportFileQuestion();

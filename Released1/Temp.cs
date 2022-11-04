@@ -12,5 +12,8 @@ namespace Released1
         public static SetOfQuestion soq = new SetOfQuestion();
         public static Test t;
         public static bool Check = false;
+        public static List <string> Data_NameOfQ = new List <string> ();
+        public static List <string> Data_NumberOfQ = new List <string> ();
+
     }
 }
