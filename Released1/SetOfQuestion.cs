@@ -117,15 +117,15 @@ namespace Released1
             int i = 0;
             string[] content = { "No","TypeQuestion","ContentQuestion","TypeAnswer","0","1","2","3","CorrectAnswer" };
             output.AppendLine(string.Join(",", content));
-            File.AppendAllText(path, output.ToString());
             foreach (QuestionAnswer question in qa)
             {
-                string[] data = { i.ToString(), "text", question._strContentQuestion, "text", question._strListAnswer[0], question._strListAnswer[1], question._strListAnswer[2], question._strListAnswer[3], question._iCorrectAnswer.ToString() };
+                string[] data = {i.ToString(), "text", question._strContentQuestion, "text", question._strListAnswer[0], question._strListAnswer[1], question._strListAnswer[2], question._strListAnswer[3], question._iCorrectAnswer.ToString() };
                 output.AppendLine(string.Join(",", data));
-                File.AppendAllText(path, output.ToString());
+                
                 i++;
             }
-            
+            File.AppendAllText(path, output.ToString());
+
         }
     }
 }

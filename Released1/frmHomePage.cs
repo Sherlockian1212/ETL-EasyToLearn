@@ -40,10 +40,11 @@ namespace Released1
         {
             cboSearchSetOfQuestion.Items.Clear();
             lstvSetOfQuestion.Items.Clear();
+
+
+            //load tên bộ câu hỏi
             DirectoryInfo d = new DirectoryInfo(Application.StartupPath + @"\SOQ");
-            FileInfo[] DataFile = d.GetFiles();//File.ReadAllLines(Application.StartupPath+ @"\Data\Data.txt");
-
-
+            FileInfo[] DataFile = d.GetFiles();
             int i = 1;
             foreach (FileInfo datafile in DataFile)
             {
@@ -56,6 +57,7 @@ namespace Released1
                 cboSearchSetOfQuestion.Items.Add(data);
                 i++;
             }
+            //load số lượng câu hỏi
             
         }
 

@@ -57,7 +57,11 @@ namespace Released1
             {
                 frmImportFileQuestion question = new frmImportFileQuestion();
                 question.ShowDialog();
-                
+                if (Temp.Check)
+                {
+                    this.Close();
+                }
+
             }
             else
             {

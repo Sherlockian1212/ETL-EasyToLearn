@@ -109,10 +109,11 @@ namespace Released1
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            
+            Temp.soq.newFile();
             DialogResult r = MessageBox.Show("Bạn có muốn lưu và thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (r == DialogResult.Yes)
             {
+                Temp.soq = new SetOfQuestion();
                 Temp.Check = true;
                 this.Close();
 

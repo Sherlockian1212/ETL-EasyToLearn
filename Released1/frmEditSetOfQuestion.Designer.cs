@@ -28,40 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rdbNewQuestion = new System.Windows.Forms.RadioButton();
-            this.rdbImportFile = new System.Windows.Forms.RadioButton();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnOut = new System.Windows.Forms.Button();
             this.lblNumOfQ = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // rdbNewQuestion
-            // 
-            this.rdbNewQuestion.AutoSize = true;
-            this.rdbNewQuestion.Location = new System.Drawing.Point(451, 178);
-            this.rdbNewQuestion.Name = "rdbNewQuestion";
-            this.rdbNewQuestion.Size = new System.Drawing.Size(176, 26);
-            this.rdbNewQuestion.TabIndex = 13;
-            this.rdbNewQuestion.TabStop = true;
-            this.rdbNewQuestion.Text = "Thêm từng câu hỏi";
-            this.rdbNewQuestion.UseVisualStyleBackColor = true;
-            // 
-            // rdbImportFile
-            // 
-            this.rdbImportFile.AutoSize = true;
-            this.rdbImportFile.Location = new System.Drawing.Point(243, 178);
-            this.rdbImportFile.Name = "rdbImportFile";
-            this.rdbImportFile.Size = new System.Drawing.Size(166, 26);
-            this.rdbImportFile.TabIndex = 14;
-            this.rdbImportFile.TabStop = true;
-            this.rdbImportFile.Text = "Nhập file (.CSV)";
-            this.rdbImportFile.UseVisualStyleBackColor = true;
             // 
             // textBox3
             // 
@@ -84,14 +60,14 @@
             this.textBox1.Size = new System.Drawing.Size(384, 30);
             this.textBox1.TabIndex = 12;
             // 
-            // btnAdd
+            // btnEdit
             // 
-            this.btnAdd.Location = new System.Drawing.Point(243, 221);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(384, 38);
-            this.btnAdd.TabIndex = 7;
-            this.btnAdd.Text = "Thêm câu hỏi";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnEdit.Location = new System.Drawing.Point(243, 221);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(384, 38);
+            this.btnEdit.TabIndex = 7;
+            this.btnEdit.Text = "Chỉnh sửa câu hỏi";
+            this.btnEdit.UseVisualStyleBackColor = true;
             // 
             // btnSave
             // 
@@ -146,19 +122,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(739, 348);
-            this.Controls.Add(this.rdbNewQuestion);
-            this.Controls.Add(this.rdbImportFile);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnOut);
             this.Controls.Add(this.lblNumOfQ);
             this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.lblName);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmEditSetOfQuestion";
             this.Text = "frmEditSetOfQuestion";
             this.ResumeLayout(false);
@@ -167,13 +141,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.RadioButton rdbNewQuestion;
-        private System.Windows.Forms.RadioButton rdbImportFile;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnOut;
         private System.Windows.Forms.Label lblNumOfQ;

@@ -234,7 +234,7 @@
     <value>375, 12</value>
   </data>
   <data name="cboSearchSetOfQuestion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>550, 30</value>
+    <value>551, 30</value>
   </data>
   <data name="cboSearchSetOfQuestion.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -285,6 +285,21 @@
   <data name="&gt;&gt;lblSearch.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="clNo.Text" xml:space="preserve">
+    <value>STT</value>
+  </data>
+  <data name="clName.Text" xml:space="preserve">
+    <value>Tên</value>
+  </data>
+  <data name="clName.Width" type="System.Int32, mscorlib">
+    <value>420</value>
+  </data>
+  <data name="cnNumOfQ.Text" xml:space="preserve">
+    <value>Số lượng câu hỏi</value>
+  </data>
+  <data name="cnNumOfQ.Width" type="System.Int32, mscorlib">
+    <value>187</value>
+  </data>
   <data name="lstvSetOfQuestion.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 10.8pt</value>
   </data>
@@ -308,21 +323,6 @@
   </data>
   <data name="&gt;&gt;lstvSetOfQuestion.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="clNo.Text" xml:space="preserve">
-    <value>STT</value>
-  </data>
-  <data name="clName.Text" xml:space="preserve">
-    <value>Tên</value>
-  </data>
-  <data name="clName.Width" type="System.Int32, mscorlib">
-    <value>420</value>
-  </data>
-  <data name="cnNumOfQ.Text" xml:space="preserve">
-    <value>Số lượng câu hỏi</value>
-  </data>
-  <data name="cnNumOfQ.Width" type="System.Int32, mscorlib">
-    <value>187</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

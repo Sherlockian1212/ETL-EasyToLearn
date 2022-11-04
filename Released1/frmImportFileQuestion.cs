@@ -30,9 +30,8 @@ namespace Released1
         private void btnSave_Click(object sender, EventArgs e)
         {
             //Đọc dữ liệu
-            File.AppendAllText(Application.StartupPath + @"\Data\\Data.txt", Temp.soq._strName + "\n");
-            Temp.Data_NameOfQ.Add(Temp.soq._strName);
-            Temp.Data_NumberOfQ.Add(Temp.soq._iNumOfQ.ToString());
+            
+            
 
             if (txtAddress.Text.Trim() == "")
             {
@@ -40,9 +39,23 @@ namespace Released1
             }
             else
             {
-                Temp.soq = new SetOfQuestion();
+                Temp.Data_NameOfQ.Add(Temp.soq._strName);
+                Temp.Data_NumberOfQ.Add(Temp.soq._iNumOfQ.ToString());
+
+               
                 Temp.soq.checkFile(txtAddress.Text);
-                this.Close();
+                string sourceFile = txtAddress.Text;
+                string destFile = System.IO.Path.Combine(Application.StartupPath + @"\SOQ", Temp.soq._strName.Trim() + ".csv");
+                System.IO.File.Copy(sourceFile, destFile, true);
+
+                DialogResult r = MessageBox.Show("Bạn có muốn lưu và thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (r == DialogResult.Yes)
+                {
+                    Temp.soq = new SetOfQuestion();
+                    Temp.Check = true;
+                    this.Close();
+
+                }
             }
         }
 

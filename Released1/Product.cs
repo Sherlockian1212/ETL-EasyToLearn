@@ -70,9 +70,5 @@ namespace Released1
             get { return CorrectAnswer; }
             set { CorrectAnswer = value; }
         }
-        public string Show()
-        {
-            return ("Name: " + this.No + " ### Price: " + this.ContentQuestion);
-        }
     }
 }

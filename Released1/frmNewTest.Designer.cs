@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblSetOfQuestion = new System.Windows.Forms.Label();
             this.cboSetOfQuestion = new System.Windows.Forms.ComboBox();
             this.btnBeginTest = new System.Windows.Forms.Button();
@@ -36,6 +37,8 @@
             this.txtNumOfQ = new System.Windows.Forms.TextBox();
             this.lblTime = new System.Windows.Forms.Label();
             this.txtTime = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSetOfQuestion
@@ -55,6 +58,7 @@
             this.cboSetOfQuestion.Name = "cboSetOfQuestion";
             this.cboSetOfQuestion.Size = new System.Drawing.Size(363, 30);
             this.cboSetOfQuestion.TabIndex = 1;
+            this.cboSetOfQuestion.SelectedIndexChanged += new System.EventHandler(this.cboSetOfQuestion_SelectedIndexChanged);
             // 
             // btnBeginTest
             // 
@@ -64,6 +68,7 @@
             this.btnBeginTest.TabIndex = 2;
             this.btnBeginTest.Text = "Làm bài";
             this.btnBeginTest.UseVisualStyleBackColor = true;
+            this.btnBeginTest.Click += new System.EventHandler(this.btnBeginTest_Click);
             // 
             // lblNumOfQ
             // 
@@ -109,6 +114,10 @@
             this.txtTime.Size = new System.Drawing.Size(100, 30);
             this.txtTime.TabIndex = 3;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmNewTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -126,6 +135,8 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmNewTest";
             this.Text = "frmNewTest";
+            this.Load += new System.EventHandler(this.frmNewTest_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,5 +152,6 @@
         private System.Windows.Forms.TextBox txtNumOfQ;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.TextBox txtTime;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
