@@ -98,48 +98,49 @@ namespace Released1
             dScore = soq.dScore;
             strAddress = soq.strAddress;
         }
-        
-        /* Truy xuất câu hỏi theo iKey */
-        public QuestionAnswer access(int iKey) 
-        {
-            QuestionAnswer a = new QuestionAnswer();
-            return a;
-        }
+
         public void checkFile(string Path)
         {
-            var engine = new FileHelperEngine(typeof(Product));
-
-            var products = (Product[])engine.ReadFile(Path);
-            int i = 0;
-            foreach(Product product in products)
+            try
             {
-                qa.Add(new QuestionAnswer());
-                qa[i]._strContentQuestion = product._ContentQuestion;
-                qa[i]._strListAnswer[0] = product._Answer1;
-                qa[i]._strListAnswer[1] = product._Answer2;
-                qa[i]._strListAnswer[2] = product._Answer3;
-                qa[i]._strListAnswer[3] = product._Answer4;
-                qa[i]._iCorrectAnswer = Convert.ToInt32(product._CorrectAnswer);
-                i++;
+                var engine = new FileHelperEngine(typeof(Product));
+                var products = (Product[])engine.ReadFile(Path);
+                int i = 0;
+
+                foreach (Product product in products)
+                {
+                    qa.Add(new QuestionAnswer());
+                    qa[i]._strContentQuestion = product._ContentQuestion;
+                    qa[i]._strListAnswer[0] = product._Answer1;
+                    qa[i]._strListAnswer[1] = product._Answer2;
+                    qa[i]._strListAnswer[2] = product._Answer3;
+                    qa[i]._strListAnswer[3] = product._Answer4;
+                    qa[i]._iCorrectAnswer = Convert.ToInt32(product._CorrectAnswer);
+                    i++;
+                }
+                iNumOfQ = products.Length;
             }
-            iNumOfQ = products.Length;
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
         public void newFile()
         {
-            string path = Application.StartupPath + @"\\SOQ\" + strName.Trim() + ".csv";
-            StringBuilder output = new StringBuilder();
-            int i = 0;
-            string[] content = { "No","TypeQuestion","ContentQuestion","TypeAnswer","0","1","2","3","CorrectAnswer" };
-            output.AppendLine(string.Join(",", content));
-            foreach (QuestionAnswer question in qa)
+            try
             {
-                string[] data = {i.ToString(), "text", question._strContentQuestion, "text", question._strListAnswer[0], question._strListAnswer[1], question._strListAnswer[2], question._strListAnswer[3], question._iCorrectAnswer.ToString() };
-                output.AppendLine(string.Join(",", data));
-                
-                i++;
-            }
-            File.AppendAllText(path, output.ToString());
+                string path = Application.StartupPath + @"\\SOQ\" + strName.Trim() + ".csv";
+                StringBuilder output = new StringBuilder();
+                int i = 0;
+                string[] content = { "No", "TypeQuestion", "ContentQuestion", "TypeAnswer", "0", "1", "2", "3", "CorrectAnswer" };
+                output.AppendLine(string.Join(",", content));
+                foreach (QuestionAnswer question in qa)
+                {
+                    string[] data = { i.ToString(), "text", question._strContentQuestion, "text", question._strListAnswer[0], question._strListAnswer[1], question._strListAnswer[2], question._strListAnswer[3], question._iCorrectAnswer.ToString() };
+                    output.AppendLine(string.Join(",", data));
 
+                    i++;
+                }
+                File.AppendAllText(path, output.ToString(), Encoding.UTF8);
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
     }
 }

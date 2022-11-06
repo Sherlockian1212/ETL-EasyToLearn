@@ -117,12 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnNewSetOfQuestion.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnNewSetOfQuestion.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 12pt, style=Bold, Italic</value>
+    <value>Bangers, 13.7999992pt</value>
   </data>
   <data name="btnNewSetOfQuestion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 159</value>
+    <value>12, 91</value>
   </data>
   <data name="btnNewSetOfQuestion.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 70</value>
@@ -144,13 +148,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnNewSetOfQuestion.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
+  </data>
+  <data name="btnNewTest.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <data name="btnNewTest.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 12pt, style=Bold, Italic</value>
+    <value>Bangers, 13.7999992pt</value>
   </data>
   <data name="btnNewTest.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 235</value>
+    <value>12, 167</value>
   </data>
   <data name="btnNewTest.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 70</value>
@@ -171,40 +178,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnNewTest.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
-  <data name="btnStatistical.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 12pt, style=Bold, Italic</value>
-  </data>
-  <data name="btnStatistical.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 311</value>
-  </data>
-  <data name="btnStatistical.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 70</value>
-  </data>
-  <data name="btnStatistical.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="btnStatistical.Text" xml:space="preserve">
-    <value>Thống kê</value>
-  </data>
-  <data name="&gt;&gt;btnStatistical.Name" xml:space="preserve">
-    <value>btnStatistical</value>
-  </data>
-  <data name="&gt;&gt;btnStatistical.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnStatistical.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnStatistical.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="btnHomePage.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <data name="btnHomePage.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 12pt, style=Bold, Italic</value>
+    <value>Bangers, 16.1999989pt</value>
   </data>
   <data name="btnHomePage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 83</value>
+    <value>12, 15</value>
   </data>
   <data name="btnHomePage.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 70</value>
@@ -225,19 +208,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnHomePage.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
+  </data>
+  <data name="cboSearchSetOfQuestion.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
   </data>
   <data name="cboSearchSetOfQuestion.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
   </data>
   <data name="cboSearchSetOfQuestion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>375, 12</value>
+    <value>376, 14</value>
   </data>
   <data name="cboSearchSetOfQuestion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>551, 30</value>
+    <value>422, 30</value>
   </data>
   <data name="cboSearchSetOfQuestion.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;cboSearchSetOfQuestion.Name" xml:space="preserve">
     <value>cboSearchSetOfQuestion</value>
@@ -249,23 +235,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cboSearchSetOfQuestion.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="lblSearch.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblSearch.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
+    <value>Bangers, 11.999999pt</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblSearch.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>249, 15</value>
+    <value>248, 9</value>
   </data>
   <data name="lblSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 22</value>
+    <value>74, 35</value>
   </data>
   <data name="lblSearch.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -283,31 +268,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblSearch.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
-  <data name="clNo.Text" xml:space="preserve">
-    <value>STT</value>
-  </data>
-  <data name="clName.Text" xml:space="preserve">
-    <value>Tên</value>
-  </data>
-  <data name="clName.Width" type="System.Int32, mscorlib">
-    <value>420</value>
-  </data>
-  <data name="cnNumOfQ.Text" xml:space="preserve">
-    <value>Số lượng câu hỏi</value>
-  </data>
-  <data name="cnNumOfQ.Width" type="System.Int32, mscorlib">
-    <value>187</value>
+  <data name="lstvSetOfQuestion.Alignment" type="System.Windows.Forms.ListViewAlignment, System.Windows.Forms">
+    <value>Left</value>
   </data>
   <data name="lstvSetOfQuestion.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 10.8pt</value>
   </data>
   <data name="lstvSetOfQuestion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 70</value>
+    <value>254, 91</value>
   </data>
   <data name="lstvSetOfQuestion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>672, 373</value>
+    <value>672, 282</value>
   </data>
   <data name="lstvSetOfQuestion.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -322,6 +295,108 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lstvSetOfQuestion.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="clNo.Text" xml:space="preserve">
+    <value>STT</value>
+  </data>
+  <data name="clName.Text" xml:space="preserve">
+    <value>Tên</value>
+  </data>
+  <data name="clName.Width" type="System.Int32, mscorlib">
+    <value>180</value>
+  </data>
+  <data name="cnNumOfQ.Text" xml:space="preserve">
+    <value>Số lượng câu hỏi</value>
+  </data>
+  <data name="cnNumOfQ.Width" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="btnSearch.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnSearch.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bangers, 11.999999pt</value>
+  </data>
+  <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>804, 9</value>
+  </data>
+  <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 45</value>
+  </data>
+  <data name="btnSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnSearch.Text" xml:space="preserve">
+    <value>Xem</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
+    <value>btnSearch</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnRefresh.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnRefresh.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bangers, 11.999999pt</value>
+  </data>
+  <data name="btnRefresh.Location" type="System.Drawing.Point, System.Drawing">
+    <value>823, 379</value>
+  </data>
+  <data name="btnRefresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 48</value>
+  </data>
+  <data name="btnRefresh.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnRefresh.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh.Name" xml:space="preserve">
+    <value>btnRefresh</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chbShow.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chbShow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 65</value>
+  </data>
+  <data name="chbShow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 20</value>
+  </data>
+  <data name="chbShow.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="chbShow.Text" xml:space="preserve">
+    <value>Ẩn bảng</value>
+  </data>
+  <data name="&gt;&gt;chbShow.Name" xml:space="preserve">
+    <value>chbShow</value>
+  </data>
+  <data name="&gt;&gt;chbShow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chbShow.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chbShow.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -334,7 +409,10 @@
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>982, 473</value>
+    <value>1002, 453</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>ETL-v1.0</value>

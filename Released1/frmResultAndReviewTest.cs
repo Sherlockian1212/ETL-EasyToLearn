@@ -31,22 +31,29 @@ namespace Released1
 
         private void btnBeginTestAgain_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < Temp.test._iUserAnswer.Count; i++)
+            try
             {
-                Temp.test._iUserAnswer[i] = 0;
+                for (int i = 0; i < Temp.test._iUserAnswer.Count; i++)
+                {
+                    Temp.test._iUserAnswer[i] = 0;
+                }
+                this.Hide();
+                frmShowQuestionInTest frmShowQuestionInTest = new frmShowQuestionInTest();
+                frmShowQuestionInTest.ShowDialog();
             }
-            this.Hide();
-            frmShowQuestionInTest frmShowQuestionInTest = new frmShowQuestionInTest();
-            frmShowQuestionInTest.ShowDialog();
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void frmResultAndReviewTest_Load(object sender, EventArgs e)
         {
-            lblName.Text = Temp.test._strName;
-            lblAnswer.Text = Temp.test.result().ToString() + "/" + Temp.test._iNumOfQ.ToString();
-            double score = (10.0/Temp.test._iNumOfQ ) * Temp.test.result();
-            lblScore.Text = Math.Round(score, 2).ToString();
-            lblTime.Text = "" + " phút";
+            try
+            {
+                lblName.Text = Temp.test._strName;
+                lblAnswer.Text = Temp.test.result().ToString() + "/" + Temp.test._iNumOfQ.ToString();
+                double score = (10.0 / Temp.test._iNumOfQ) * Temp.test.result();
+                lblScore.Text = Math.Round(score, 2).ToString();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
     }
 }

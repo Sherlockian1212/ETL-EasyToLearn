@@ -28,127 +28,138 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnOut = new System.Windows.Forms.Button();
             this.lblNumOfQ = new System.Windows.Forms.Label();
-            this.lblDescription = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.lblNum = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox3
+            // txtName
             // 
-            this.textBox3.Location = new System.Drawing.Point(243, 113);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(166, 30);
-            this.textBox3.TabIndex = 10;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(243, 63);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(384, 30);
-            this.textBox2.TabIndex = 11;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(243, 14);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(384, 30);
-            this.textBox1.TabIndex = 12;
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtName.Location = new System.Drawing.Point(181, 19);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(418, 30);
+            this.txtName.TabIndex = 1;
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(243, 221);
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Bangers", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnEdit.Location = new System.Drawing.Point(18, 105);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(384, 38);
-            this.btnEdit.TabIndex = 7;
+            this.btnEdit.Size = new System.Drawing.Size(213, 45);
+            this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Chỉnh sửa câu hỏi";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(337, 274);
+            this.btnSave.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Bangers", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnSave.Location = new System.Drawing.Point(237, 105);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(142, 38);
-            this.btnSave.TabIndex = 8;
+            this.btnSave.Size = new System.Drawing.Size(119, 45);
+            this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Lưu";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnOut
             // 
-            this.btnOut.Location = new System.Drawing.Point(485, 274);
+            this.btnOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOut.Font = new System.Drawing.Font("Bangers", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnOut.Location = new System.Drawing.Point(479, 105);
             this.btnOut.Name = "btnOut";
-            this.btnOut.Size = new System.Drawing.Size(142, 38);
-            this.btnOut.TabIndex = 9;
+            this.btnOut.Size = new System.Drawing.Size(122, 45);
+            this.btnOut.TabIndex = 5;
             this.btnOut.Text = "Thoát";
             this.btnOut.UseVisualStyleBackColor = true;
+            this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
             // 
             // lblNumOfQ
             // 
             this.lblNumOfQ.AutoSize = true;
-            this.lblNumOfQ.Location = new System.Drawing.Point(83, 121);
+            this.lblNumOfQ.Font = new System.Drawing.Font("Bangers", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblNumOfQ.Location = new System.Drawing.Point(14, 57);
             this.lblNumOfQ.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblNumOfQ.Name = "lblNumOfQ";
-            this.lblNumOfQ.Size = new System.Drawing.Size(144, 22);
+            this.lblNumOfQ.Size = new System.Drawing.Size(137, 35);
             this.lblNumOfQ.TabIndex = 4;
             this.lblNumOfQ.Text = "Số lượng câu hỏi";
-            // 
-            // lblDescription
-            // 
-            this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(83, 71);
-            this.lblDescription.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(56, 22);
-            this.lblDescription.TabIndex = 5;
-            this.lblDescription.Text = "Mô tả";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(83, 22);
+            this.lblName.Font = new System.Drawing.Font("Bangers", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblName.Location = new System.Drawing.Point(14, 14);
             this.lblName.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(127, 22);
+            this.lblName.Size = new System.Drawing.Size(117, 35);
             this.lblName.TabIndex = 6;
             this.lblName.Text = "Tên bộ câu hỏi";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Bangers", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnDelete.Location = new System.Drawing.Point(362, 105);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(111, 45);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // lblNum
+            // 
+            this.lblNum.AutoSize = true;
+            this.lblNum.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblNum.Location = new System.Drawing.Point(177, 57);
+            this.lblNum.Name = "lblNum";
+            this.lblNum.Size = new System.Drawing.Size(30, 22);
+            this.lblNum.TabIndex = 13;
+            this.lblNum.Text = "00";
             // 
             // frmEditSetOfQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(739, 348);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(646, 180);
+            this.Controls.Add(this.lblNum);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnOut);
             this.Controls.Add(this.lblNumOfQ);
-            this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.lblName);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmEditSetOfQuestion";
-            this.Text = "frmEditSetOfQuestion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "ETL-v1.0";
+            this.Load += new System.EventHandler(this.frmEditSetOfQuestion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnOut;
         private System.Windows.Forms.Label lblNumOfQ;
-        private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label lblNum;
     }
 }

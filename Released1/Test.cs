@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Released1
 {
@@ -13,7 +14,7 @@ namespace Released1
         int iNumOfQ;
         List <QuestionAnswer> qaListQuestionAnswer;
         List <int> iUserAnswer;
-        DateTime dtTime;
+        int dtTime;
         int dtTimeLimit;
         double dScore;
         double dMaxScore;
@@ -46,7 +47,7 @@ namespace Released1
             get { return iUserAnswer; }
             set { iUserAnswer = value; }
         }
-        public DateTime _dtTime
+        public int _dtTime
         {
             get { return dtTime; }
             set { dtTime = value; }
@@ -81,7 +82,7 @@ namespace Released1
             iNumOfQ = 0;
             qaListQuestionAnswer = new List<QuestionAnswer>();
             iUserAnswer = new List<int>();
-            dtTime = new DateTime();
+            dtTime = new int();
             dtTimeLimit = 0;
             dScore = 0;
             dMaxScore = 0;
@@ -92,7 +93,7 @@ namespace Released1
             int iNumOfQ, 
             List <QuestionAnswer> qaListQuestionAnswer, 
             List <int> iUserAnswer, 
-            DateTime dtTime, 
+            int dtTime, 
             int dtTimeLimit, 
             double dScore, 
             double dMaxScore, 
@@ -125,14 +126,18 @@ namespace Released1
         public int result()
         {
             int r = 0;
-            for (int i =0; i < iNumOfQ; i++)
+            try
             {
-                if ( iUserAnswer[i] == qaListQuestionAnswer[i]._iCorrectAnswer)
+                r = 0;
+                for (int i = 0; i < iNumOfQ; i++)
                 {
-                    r++;
+                    if (iUserAnswer[i] == qaListQuestionAnswer[i]._iCorrectAnswer)
+                    {
+                        r++;
+                    }
                 }
             }
-           
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
             return r;
         }
     }

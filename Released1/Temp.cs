@@ -8,7 +8,7 @@ namespace Released1
 {
     internal class Temp
     {
-        public static QuestionAnswer[] qa;
+        public static List<QuestionAnswer> qa;
         public static SetOfQuestion soq = new SetOfQuestion();
         public static Test test = new Test();
         public static bool Check = false;

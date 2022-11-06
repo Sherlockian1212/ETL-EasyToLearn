@@ -28,24 +28,28 @@ namespace Released1
         }
         private void frmReviewTest_Load(object sender, EventArgs e)
         {
-            i = 0;
-            
-            btnBack.Enabled = false;
-            lblIndex.Text = "<Câu hỏi số " + (i + 1).ToString() + ">";
-            lblCorrectAnswer.Text = "Câu trả lời đúng: " + correct(i);
-            rtbContent.Text = Temp.test._qaListQuestionAnswer[i]._strContentQuestion;
-            txtA.Text = Temp.test._qaListQuestionAnswer[i]._strListAnswer[0];
-            txtB.Text = Temp.test._qaListQuestionAnswer[i]._strListAnswer[1];
-            txtC.Text = Temp.test._qaListQuestionAnswer[i]._strListAnswer[2];
-            txtD.Text = Temp.test._qaListQuestionAnswer[i]._strListAnswer[3];
-            if (Temp.test._iUserAnswer[i] == 0)
-                rdbA.Checked = true;
-            else if (Temp.test._iUserAnswer[i] == 1)
-                rdbB.Checked = true;
-            else if (Temp.test._iUserAnswer[i] == 2)
-                rdbC.Checked = true;
-            else if (Temp.test._iUserAnswer[i] == 3)
-                rdbD.Checked = true;
+            try
+            {
+                i = 0;
+
+                btnBack.Enabled = false;
+                lblIndex.Text = "<Câu hỏi số " + (i + 1).ToString() + ">";
+                lblCorrectAnswer.Text = "Câu trả lời đúng: " + correct(i);
+                rtbContent.Text = Temp.test._qaListQuestionAnswer[i]._strContentQuestion;
+                txtA.Text = Temp.test._qaListQuestionAnswer[i]._strListAnswer[0];
+                txtB.Text = Temp.test._qaListQuestionAnswer[i]._strListAnswer[1];
+                txtC.Text = Temp.test._qaListQuestionAnswer[i]._strListAnswer[2];
+                txtD.Text = Temp.test._qaListQuestionAnswer[i]._strListAnswer[3];
+                if (Temp.test._iUserAnswer[i] == 0)
+                    rdbA.Checked = true;
+                else if (Temp.test._iUserAnswer[i] == 1)
+                    rdbB.Checked = true;
+                else if (Temp.test._iUserAnswer[i] == 2)
+                    rdbC.Checked = true;
+                else if (Temp.test._iUserAnswer[i] == 3)
+                    rdbD.Checked = true;
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void btnOut_Click(object sender, EventArgs e)
@@ -55,74 +59,82 @@ namespace Released1
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            i++;
+            try
+            {
+                i++;
 
-            if (i == 0)
-            {
-                btnBack.Enabled = false;
-                btnNext.Enabled = true;
+                if (i == 0)
+                {
+                    btnBack.Enabled = false;
+                    btnNext.Enabled = true;
+                }
+                else if (i == Temp.test._iNumOfQ - 1)
+                {
+                    btnBack.Enabled = true;
+                    btnNext.Enabled = false;
+                }
+                else
+                {
+                    btnNext.Enabled = true;
+                    btnBack.Enabled = true;
+                }
+                lblIndex.Text = "<Câu hỏi số " + (i + 1).ToString() + ">";
+                rtbContent.Text = Temp.test._qaListQuestionAnswer[i]._strContentQuestion;
+                txtA.Text = Temp.test._qaListQuestionAnswer[i]._strListAnswer[0];
+                txtB.Text = Temp.test._qaListQuestionAnswer[i]._strListAnswer[1];
+                txtC.Text = Temp.test._qaListQuestionAnswer[i]._strListAnswer[2];
+                txtD.Text = Temp.test._qaListQuestionAnswer[i]._strListAnswer[3];
+                if (Temp.test._iUserAnswer[i] == 0)
+                    rdbA.Checked = true;
+                else if (Temp.test._iUserAnswer[i] == 1)
+                    rdbB.Checked = true;
+                else if (Temp.test._iUserAnswer[i] == 2)
+                    rdbC.Checked = true;
+                else if (Temp.test._iUserAnswer[i] == 3)
+                    rdbD.Checked = true;
+                lblCorrectAnswer.Text = "Câu trả lời đúng: " + correct(i);
             }
-            else if (i == Temp.test._iNumOfQ - 1)
-            {
-                btnBack.Enabled = true;
-                btnNext.Enabled = false;
-            }
-            else
-            {
-                btnNext.Enabled = true;
-                btnBack.Enabled = true;
-            }
-            lblIndex.Text = "<Câu hỏi số " + (i + 1).ToString() + ">";
-            rtbContent.Text = Temp.test._qaListQuestionAnswer[i]._strContentQuestion;
-            txtA.Text = Temp.test._qaListQuestionAnswer[i]._strListAnswer[0];
-            txtB.Text = Temp.test._qaListQuestionAnswer[i]._strListAnswer[1];
-            txtC.Text = Temp.test._qaListQuestionAnswer[i]._strListAnswer[2];
-            txtD.Text = Temp.test._qaListQuestionAnswer[i]._strListAnswer[3];
-            if (Temp.test._iUserAnswer[i] == 0)
-                rdbA.Checked = true;
-            else if (Temp.test._iUserAnswer[i] == 1)
-                rdbB.Checked = true;
-            else if (Temp.test._iUserAnswer[i] == 2)
-                rdbC.Checked = true;
-            else if (Temp.test._iUserAnswer[i] == 3)
-                rdbD.Checked = true;
-            lblCorrectAnswer.Text = "Câu trả lời đúng: " + correct(i);
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            i--;
+            try
+            {
+                i--;
 
-            if (i == 0)
-            {
-                btnBack.Enabled = false;
-                btnNext.Enabled = true;
+                if (i == 0)
+                {
+                    btnBack.Enabled = false;
+                    btnNext.Enabled = true;
+                }
+                else if (i == Temp.test._iNumOfQ - 1)
+                {
+                    btnBack.Enabled = true;
+                    btnNext.Enabled = false;
+                }
+                else
+                {
+                    btnNext.Enabled = true;
+                    btnBack.Enabled = true;
+                }
+                lblIndex.Text = "<Câu hỏi số " + (i + 1).ToString() + ">";
+                rtbContent.Text = Temp.soq.qa[i]._strContentQuestion;
+                txtA.Text = Temp.test._qaListQuestionAnswer[i]._strListAnswer[0];
+                txtB.Text = Temp.test._qaListQuestionAnswer[i]._strListAnswer[1];
+                txtC.Text = Temp.test._qaListQuestionAnswer[i]._strListAnswer[2];
+                txtD.Text = Temp.test._qaListQuestionAnswer[i]._strListAnswer[3];
+                if (Temp.test._iUserAnswer[i] == 0)
+                    rdbA.Checked = true;
+                else if (Temp.test._iUserAnswer[i] == 1)
+                    rdbB.Checked = true;
+                else if (Temp.test._iUserAnswer[i] == 2)
+                    rdbC.Checked = true;
+                else if (Temp.test._iUserAnswer[i] == 3)
+                    rdbD.Checked = true;
+                lblCorrectAnswer.Text = "Câu trả lời đúng: " + correct(i);
             }
-            else if (i == Temp.test._iNumOfQ - 1)
-            {
-                btnBack.Enabled = true;
-                btnNext.Enabled = false;
-            }
-            else
-            {
-                btnNext.Enabled = true;
-                btnBack.Enabled = true;
-            }
-            lblIndex.Text = "<Câu hỏi số " + (i + 1).ToString() + ">";
-            rtbContent.Text = Temp.soq.qa[i]._strContentQuestion;
-            txtA.Text = Temp.test._qaListQuestionAnswer[i]._strListAnswer[0];
-            txtB.Text = Temp.test._qaListQuestionAnswer[i]._strListAnswer[1];
-            txtC.Text = Temp.test._qaListQuestionAnswer[i]._strListAnswer[2];
-            txtD.Text = Temp.test._qaListQuestionAnswer[i]._strListAnswer[3];
-            if (Temp.test._iUserAnswer[i] == 0)
-                rdbA.Checked = true;
-            else if (Temp.test._iUserAnswer[i] == 1)
-                rdbB.Checked = true;
-            else if (Temp.test._iUserAnswer[i] == 2)
-                rdbC.Checked = true;
-            else if (Temp.test._iUserAnswer[i] == 3)
-                rdbD.Checked = true;
-            lblCorrectAnswer.Text = "Câu trả lời đúng: " + correct(i);
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
     }
 }

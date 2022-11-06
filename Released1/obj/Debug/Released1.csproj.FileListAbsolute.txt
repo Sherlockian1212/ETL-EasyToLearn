@@ -45,12 +45,10 @@ D:\KHKT\ETL-EasyToLearn\Released1\obj\Debug\Released1.pdb
 D:\KHKT\ETL-EasyToLearn\Released1\obj\Debug\Released1.frmEditQuestion.resources
 D:\KHKT\ETL-EasyToLearn\Released1\obj\Debug\Released1.frmEditSetOfQuestion.resources
 D:\KHKT\ETL-EasyToLearn\Released1\obj\Debug\Released1.frmImportFileQuestion.resources
-D:\KHKT\ETL-EasyToLearn\Released1\obj\Debug\Released1.frmInfoSetOfQuestion.resources
 D:\KHKT\ETL-EasyToLearn\Released1\obj\Debug\Released1.frmNewQuestion.resources
 D:\KHKT\ETL-EasyToLearn\Released1\obj\Debug\Released1.frmNewSetOfQuestion.resources
 D:\KHKT\ETL-EasyToLearn\Released1\obj\Debug\Released1.frmNewTest.resources
 D:\KHKT\ETL-EasyToLearn\Released1\obj\Debug\Released1.frmResultAndReviewTest.resources
 D:\KHKT\ETL-EasyToLearn\Released1\obj\Debug\Released1.frmReviewTest.resources
 D:\KHKT\ETL-EasyToLearn\Released1\obj\Debug\Released1.frmShowQuestionInTest.resources
-D:\KHKT\ETL-EasyToLearn\Released1\obj\Debug\Released1.frmStatistical.resources
 D:\KHKT\ETL-EasyToLearn\Released1\obj\Debug\Released1.frmHomePage.resources

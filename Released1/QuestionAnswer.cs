@@ -57,7 +57,7 @@ namespace Released1
             strTypeAnswer = "";
             iNumChoose = 0;
             strListAnswer = new List<string> { "","","",""};
-            iCorrectAnswer = -1;
+            iCorrectAnswer = 0;
         }
         public QuestionAnswer(string strTypeQuestion, 
             string strContentQuestion, 

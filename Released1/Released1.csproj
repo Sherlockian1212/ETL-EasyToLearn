@@ -244,12 +244,6 @@
     <Compile Include="frmImportFileQuestion.Designer.cs">
       <DependentUpon>frmImportFileQuestion.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmInfoSetOfQuestion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmInfoSetOfQuestion.Designer.cs">
-      <DependentUpon>frmInfoSetOfQuestion.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmNewSetOfQuestion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,12 +274,6 @@
     <Compile Include="frmShowQuestionInTest.Designer.cs">
       <DependentUpon>frmShowQuestionInTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStatistical.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmStatistical.Designer.cs">
-      <DependentUpon>frmStatistical.cs</DependentUpon>
-    </Compile>
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -306,9 +294,6 @@
     <EmbeddedResource Include="frmImportFileQuestion.resx">
       <DependentUpon>frmImportFileQuestion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmInfoSetOfQuestion.resx">
-      <DependentUpon>frmInfoSetOfQuestion.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmNewQuestion.resx">
       <DependentUpon>frmNewQuestion.cs</DependentUpon>
     </EmbeddedResource>
@@ -327,9 +312,6 @@
     <EmbeddedResource Include="frmShowQuestionInTest.resx">
       <DependentUpon>frmShowQuestionInTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStatistical.resx">
-      <DependentUpon>frmStatistical.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -338,6 +320,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -357,6 +340,9 @@
     <Content Include="Image\Background.jpg" />
     <Content Include="Image\Background01.jpg" />
     <Content Include="Image\Background02.jpg" />
+    <Content Include="Image\BG01.jpg" />
+    <None Include="Image\BG02.jpg" />
+    <None Include="Resources\Image1.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />
