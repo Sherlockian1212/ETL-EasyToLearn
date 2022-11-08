@@ -228,26 +228,5 @@ namespace Released1
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
-
-        private void frmShowQuestionInTest_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            try
-            {
-                if (Temp.Check == false)
-                {
-                    DialogResult r = MessageBox.Show("Bạn có muốn nộp bài?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (r == DialogResult.Yes)
-                    {
-                        timer1.Stop();
-                        Temp.Check = true;
-                        this.Hide();
-                        frmResultAndReviewTest frmResultAndReviewTest = new frmResultAndReviewTest();
-                        frmResultAndReviewTest.ShowDialog();
-                    }
-                }
-            }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
-        }
-
     }
 }

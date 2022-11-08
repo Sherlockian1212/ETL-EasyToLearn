@@ -279,7 +279,6 @@
             this.Name = "frmShowQuestionInTest";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ETL-v1.0";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmShowQuestionInTest_FormClosing);
             this.Load += new System.EventHandler(this.frmShowQuestionInTest_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

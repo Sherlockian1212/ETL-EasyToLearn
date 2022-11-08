@@ -21,6 +21,8 @@ namespace Released1
 
         private void frmEditQuestion_Load(object sender, EventArgs e)
         {
+            btnAdd.Hide();
+            btnDelete.Hide();
             try
             {
                 Temp.qa = Temp.soq.qa;
