@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditQuestion));
             this.lblContent = new System.Windows.Forms.Label();
             this.rtbContent = new System.Windows.Forms.RichTextBox();
             this.btnNext = new System.Windows.Forms.Button();
@@ -255,6 +256,7 @@
             this.Controls.Add(this.lblIndex);
             this.Controls.Add(this.lblContent);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "frmEditQuestion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmShowQuestionInTest));
             this.rdbD = new System.Windows.Forms.RadioButton();
             this.rdbC = new System.Windows.Forms.RadioButton();
             this.rdbB = new System.Windows.Forms.RadioButton();
@@ -275,6 +276,7 @@
             this.Controls.Add(this.lblTextTime);
             this.Controls.Add(this.lblContent);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmShowQuestionInTest";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
