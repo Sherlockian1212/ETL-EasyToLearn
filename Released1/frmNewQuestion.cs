@@ -23,10 +23,24 @@ namespace Released1
         {
             try
             {
-                i = 0;
-                btnBack.Enabled = false;
-                btnSave.Enabled = false;
-                rdbA.Checked = true;
+                
+                if (Temp.soq._iNumOfQ == 1)
+                {
+                    btnSave.Enabled = true ;
+                    btnBack.Enabled = false;
+                    btnNext.Enabled = false;
+                    rdbA.Checked = true;
+                }
+                else
+                {
+                    
+                        i = 0;
+                        btnBack.Enabled = false;
+                        btnSave.Enabled = false;
+                        rdbA.Checked = true;
+                
+                }
+                
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }

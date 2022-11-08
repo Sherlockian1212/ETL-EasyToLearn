@@ -79,7 +79,16 @@ namespace Released1
         {
             try
             {
-                cboSearchSetOfQuestion.Text = lstvSetOfQuestion.FocusedItem.SubItems[1].Text;
+                foreach(ListViewItem list in lstvSetOfQuestion.Items)
+                {
+                    if (list.Focused)
+                    {
+                        cboSearchSetOfQuestion.Text = list.SubItems[1].Text;
+                        return;
+                    }
+                    
+                }
+                
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }

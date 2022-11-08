@@ -337,11 +337,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Image\Background.jpg" />
-    <Content Include="Image\Background01.jpg" />
-    <Content Include="Image\Background02.jpg" />
-    <Content Include="Image\BG01.jpg" />
-    <None Include="Image\BG02.jpg" />
     <None Include="Resources\Image1.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

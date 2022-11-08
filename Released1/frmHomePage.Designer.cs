@@ -134,7 +134,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Released1.Properties.Resources.BG02;
+            //this.BackgroundImage = global::Released1.Properties.Resources.BG02;
             this.Controls.Add(this.chbShow);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnSearch);

@@ -48,6 +48,15 @@ namespace Released1
                     rdbD.Checked = true;
                 }
                 btnBack.Enabled = false;
+
+                if (Temp.soq._iNumOfQ == 1)
+                {
+                    btnNext.Enabled = false;
+                }
+                else
+                {
+                    btnNext.Enabled = true;
+                }
             } catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
