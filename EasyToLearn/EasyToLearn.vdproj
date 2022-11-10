@@ -952,12 +952,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_85A8D6C9538DC697E04919130E0B100C"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_173771D98E4C4CED96F5C01E8993F886"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1831,6 +1825,12 @@
         "OwnerKey" = "8:_DCC0F1C3F7BC56ECAD86714A7B5631EA"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_85A8D6C9538DC697E04919130E0B100C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -1849,6 +1849,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -1865,6 +1881,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -6519,7 +6551,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Easy To Learn"
         "ProductCode" = "8:{9856966A-54CB-4757-9672-5A76661C762C}"
-        "PackageCode" = "8:{4160F5D8-70AF-4D1A-813B-7D3816D4E792}"
+        "PackageCode" = "8:{7DFFB8D4-0D44-40D3-BCF8-5AA799224AA1}"
         "UpgradeCode" = "8:{0E3BE119-4EA3-4641-AA8B-DE096782DC1F}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -6653,9 +6685,9 @@
             "Icon" = "8:_E8319838977B491FBDDED717B19EA9D8"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_C0700ABF14E248428487F694BF75F078"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_C411A78626714D94BE777D57503ABB11"
             {
-            "Name" = "8:EasyToLearn-ETL"
+            "Name" = "8:ETL-EasyToLearn"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
