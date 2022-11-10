@@ -29,6 +29,7 @@ namespace Released1
         {
             frmNewSetOfQuestion frmNewSetOfQuestion = new frmNewSetOfQuestion();
             frmNewSetOfQuestion.ShowDialog();
+            frmHomePage_Load(sender, e);
         }
 
         private void frmHomePage_Load(object sender, EventArgs e)
@@ -71,6 +72,7 @@ namespace Released1
                     Temp.soq.checkFile(Application.StartupPath + @"\SOQ\" + Temp.soq._strName);
                     frmEditSetOfQuestion frmEditSetOfQuestion = new frmEditSetOfQuestion();
                     frmEditSetOfQuestion.ShowDialog();
+                    frmHomePage_Load(sender, e);   
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }

@@ -50,17 +50,21 @@ namespace Released1
             //đổi tên file
             try
             {
-                string oldFilePath = Application.StartupPath + @"\SOQ\" + Temp.soq._strName; // Full path of old file
-                string newFilePath = Application.StartupPath + @"\SOQ\" + txtName.Text + ".csv"; // Full path of new file
-
-                if (File.Exists(newFilePath))
+                if (Temp.soq._strName != txtName.Text +".csv")
                 {
-                    File.Delete(newFilePath);
+                    string oldFilePath = Application.StartupPath + @"\SOQ\" + Temp.soq._strName; // Full path of old file
+                    string newFilePath = Application.StartupPath + @"\SOQ\" + txtName.Text + ".csv"; // Full path of new file
+
+                    if (File.Exists(newFilePath))
+                    {
+                        File.Delete(newFilePath);
+                    }
+                    File.Move(oldFilePath, newFilePath);
+
+                    Temp.soq._strName = txtName.Text;
+
+                    
                 }
-                File.Move(oldFilePath, newFilePath);
-
-                Temp.soq._strName = txtName.Text;
-
                 this.Close();
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
@@ -70,6 +74,8 @@ namespace Released1
         {
             frmEditQuestion frmEditQuestion = new frmEditQuestion();
             frmEditQuestion.ShowDialog();
+            if (Temp.Check == true) {this.Close();Temp.Check = false;}  
+            
         }
     }
 }
